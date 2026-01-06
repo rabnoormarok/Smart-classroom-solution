@@ -20,4 +20,8 @@ The Smart Classroom Solution is a **low-cost, portable, and easy-to-deploy smart
 - Basic sensors (optional)
 - Open-source software
 
-
+##🎯 Impact
+- Enhances teaching quality
+- Makes classrooms digitally accessible
+- Affordable for institutions with limited budgets
+- Supports modern learning methods
