@@ -195,7 +195,14 @@
   <p>
     Teachers log into the system and display slides, videos, and quizzes. Students follow along on any device. Real-time polls and questions keep lessons interactive.
   </p>
-  <button onclick="startDemo()">Start Demo</button>
+  <button onclick="startlesson()">Start lesson</button>
+div id="lessonContainer">
+    <div id="lessonText"></div>
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+    </div>
+    <button id="nextBtn" onclick="nextLesson()">Next</button>
+  </div>
 </section>
 
 <!-- Features Section -->
@@ -232,6 +239,42 @@
 <footer>
   &copy; 2026 Smart Classroom Solution
 </footer>
+
+<script>
+  const lessons = [
+    "Welcome to Smart Classroom! Today we learn about digital teaching.",
+    "Step 1: Teacher opens slides on web interface.",
+    "Step 2: Students view slides and interact via polls.",
+    "Step 3: Teacher runs a quiz to check understanding.",
+    "Step 4: Lesson completed! Students are engaged and learning improved."
+  ];
+
+  let currentLesson = 0;
+
+  function startLesson() {
+    document.getElementById('lessonContainer').style.display = 'block';
+    currentLesson = 0;
+    showLesson();
+  }
+
+  function showLesson() {
+    document.getElementById('lessonText').innerText = lessons[currentLesson];
+    const progressPercent = ((currentLesson+1)/lessons.length)*100;
+    document.getElementById('progressBar').style.width = progressPercent + '%';
+    document.getElementById('nextBtn').innerText = (currentLesson === lessons.length-1) ? "Finish" : "Next";
+  }
+
+  function nextLesson() {
+    if(currentLesson < lessons.length-1) {
+      currentLesson++;
+      showLesson();
+    } else {
+      alert("Lesson Completed! 🎉 Smart Classroom Demo Finished.");
+      document.getElementById('lessonContainer').style.display = 'none';
+    }
+  }
+</script>
+
 
 <script>
   // Demo button alert
