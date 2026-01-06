@@ -4,116 +4,235 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Classroom Solution</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f4f8;
+      background: #f4f6f8;
+      scroll-behavior: smooth;
       color: #333;
     }
 
-    header {
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
       background: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    h1 {
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      color: white;
+    }
+
+    header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 10px 0 0 0;
+      font-size: 18px;
     }
 
     section {
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 25px;
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+    }
+
+    section img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
     }
 
     h2 {
       color: #4CAF50;
-      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 img {
+      width: 28px;
+      height: 28px;
     }
 
     p {
       line-height: 1.6;
     }
 
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
     button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       font-size: 16px;
       color: white;
       background-color: #4CAF50;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
+      margin-top: 15px;
     }
 
     button:hover {
       background-color: #45a049;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 20px 10px;
+      padding: 25px 10px;
       background: #333;
       color: white;
-      margin-top: 30px;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
+      margin-top: 40px;
+    }
+
+    /* Cards for features */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .card {
+      padding: 15px;
+      background: #e8f5e9;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 26px; }
+      nav { flex-wrap: wrap; gap: 10px; }
     }
   </style>
 </head>
 <body>
 
+<!-- Navigation -->
+<nav>
+  <a href="#problem">Problem</a>
+  <a href="#solution">Solution</a>
+  <a href="#how">How It Works</a>
+  <a href="#features">Features</a>
+  <a href="#benefits">Benefits</a>
+  <a href="#demo">Demo</a>
+  <a href="#developer">Developer</a>
+</nav>
+
+<!-- Header -->
 <header>
   <h1>Smart Classroom Solution</h1>
+  <p>Interactive, low-cost, and digital learning for modern classrooms</p>
 </header>
 
-<section>
-  <h2>Problem Statement</h2>
+<!-- Problem Section -->
+<section id="problem">
+  <h2><img src="https://img.icons8.com/ios-filled/50/4CAF50/error.png" alt="problem"> Problem Statement</h2>
+  <img src="https://images.unsplash.com/photo-1581093588401-0e6d3b49f40f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=700" alt="Empty classroom">
   <p>
-    Many lecture halls on campus lack projectors and smart teaching equipment, which reduces effective content delivery and student engagement.
+    Many lecture halls lack projectors, smart boards, and digital teaching equipment. This reduces engagement and learning quality for students.
   </p>
 </section>
 
-<section>
-  <h2>Proposed Solution</h2>
+<!-- Solution Section -->
+<section id="solution">
+  <h2><img src="https://img.icons8.com/ios-filled/50/4CAF50/idea.png" alt="solution"> Proposed Solution</h2>
+  <img src="https://images.unsplash.com/photo-1581090700227-7fef63814dfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=700" alt="Smart Classroom">
   <p>
-    The Smart Classroom Solution is a low-cost, portable, and easy-to-use digital teaching system that allows instructors to deliver lessons effectively without relying on expensive infrastructure.
+    The Smart Classroom Solution is a low-cost, portable, and easy-to-use system enabling teachers to deliver lessons digitally. It supports interactive learning and reduces dependency on expensive equipment.
   </p>
 </section>
 
-<section>
-  <h2>How It Works</h2>
+<!-- How It Works Section -->
+<section id="how">
+  <h2><img src="https://img.icons8.com/ios-filled/50/4CAF50/process.png" alt="how it works"> How It Works</h2>
+  <img src="https://images.unsplash.com/photo-1596496059741-1792bc45296a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=700" alt="Teacher using smart teaching tools">
   <p>
-    Teachers use a web-based interface to display digital content, slides, and videos. Students can follow along on their devices or a shared projector. The system simplifies lesson delivery and improves engagement.
+    Teachers use a web interface to display slides, videos, and interactive content. Students follow along on their devices or a shared projector. Quizzes and polls engage students during lessons.
   </p>
   <button onclick="alert('Smart Classroom Activated!')">Start Demo</button>
 </section>
 
-<section>
-  <h2>Key Features</h2>
-  <ul>
-    <li>Low-cost setup for any classroom</li>
-    <li>Supports slides, videos, and images</li>
-    <li>Easy-to-use web interface</li>
-    <li>Portable and scalable</li>
-  </ul>
+<!-- Features Section -->
+<section id="features">
+  <h2><img src="https://img.icons8.com/ios-filled/50/4CAF50/settings.png" alt="features"> Key Features</h2>
+  <div class="cards">
+    <div class="card">Interactive Lessons</div>
+    <div class="card">Supports Slides & Videos</div>
+    <div class="card">Low-Cost & Portable</div>
+    <div class="card">Mobile & Desktop Friendly</div>
+    <div class="card">Boosts Engagement</div>
+  </div>
 </section>
 
-<section>
-  <h2>Developer</h2>
+<!-- Benefits Section -->
+<section id="benefits">
+  <h2><img src="https://img.icons8.com/ios-filled/50/4CAF50/ok.png" alt="benefits"> Benefits</h2>
+  <div class="cards">
+    <div class="card">Reduces dependency on expensive equipment</div>
+    <div class="card">Interactive learning for all students</div>
+    <div class="card">Easy to deploy anywhere</div>
+    <div class="card">Accessible on all devices</div>
+    <div class="card">Improves teaching quality</div>
+  </div>
+</section>
+
+<!-- Developer Section -->
+<section id="developer">
+  <h2><img src="https://img.icons8.com/ios-filled/50/4CAF50/developer.png" alt="developer"> Developer</h2>
   <p>Yuvtaj Singh Marok (Solo)</p>
 </section>
 
+<!-- Footer -->
 <footer>
   &copy; 2026 Smart Classroom Solution
 </footer>
