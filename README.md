@@ -25,3 +25,6 @@ The Smart Classroom Solution is a **low-cost, portable, and easy-to-deploy smart
 - Makes classrooms digitally accessible
 - Affordable for institutions with limited budgets
 - Supports modern learning methods
+
+🔗Project link 
+https://github.com/rabnoormarok/Smart-classroom-solution.git
